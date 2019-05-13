@@ -58,7 +58,7 @@
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // login_maestro
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,8 +66,8 @@
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_user);
-            this.Name = "login_maestro";
-            this.Text = "login_maestro";
+            this.Name = "login";
+            this.Text = "Control escolar";
             this.ResumeLayout(false);
             this.PerformLayout();
 

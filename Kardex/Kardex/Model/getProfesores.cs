@@ -20,7 +20,7 @@ namespace Kardex
             SqlParameter userParameter = new SqlParameter("@user", user);
             SqlParameter passParameter = new SqlParameter("@password", password);
 
-            SqlCommand command = new SqlCommand("SELECT P.NUE, nombre, a_paterno, a_materno, D.departamento FROM PROFESORES P, DEPARTAMENTO D WHERE (correo=@user OR P.NUE=@nue) AND passw=@password;", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM PROFESORES P,DEPARTAMENTO WHERE (correo=@user OR P.NUE=@nue) AND passw=@password;", connection);
             command.Parameters.Add(nueParameter);
             command.Parameters.Add(userParameter);
             command.Parameters.Add(passParameter);
@@ -30,12 +30,17 @@ namespace Kardex
             {
                 Profesor.NUE = reader.GetInt32(0);
                 Profesor.nombre = reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3);
-                Profesor.departamento = reader.GetString(4);
+                Profesor.direccion = reader.GetString(4);
+                Profesor.tel = reader.GetString(5);
+                Profesor.ext = reader.GetInt32(6);
+                Profesor.cub = reader.GetInt32(7);
+                Profesor.correo = reader.GetString(8);
+                Profesor.departamento = reader.GetString(10);
             }
             reader.Close();
             connection.Close();
 
-            if (String.IsNullOrEmpty(Profesor.nombre))
+            if (Profesor.NUE <=0)
             {
                 return false;
             }
