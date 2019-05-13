@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace Kardex
 {
-    public partial class Form1 : Form
+    public partial class Console_maestro : Form
     {
-        public Form1()
+        public Console_maestro()
         {
             InitializeComponent();
+
+            lbl_NUE.Text = Profesor.NUE.ToString();
+            lbl_nombre.Text = Profesor.nombre;
+            lbl_dpto.Text = Profesor.departamento;
         }
     }
 }
