@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kardex.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Kardex
         public login()
         {
             InitializeComponent();
+
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -34,7 +36,9 @@ namespace Kardex
                 }
                 else if (student)
                 {
-                    MessageBox.Show("Es alumno");
+                    Control_Alumno alumno = new Control_Alumno();
+                    alumno.Show();
+                    this.Hide();
                 }
                 else
                 {
