@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kardex.Model;
+using Kardex.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +18,15 @@ namespace Kardex
         {
             InitializeComponent();
 
-            lbl_NUE.Text = Profesor.NUE.ToString();
-            lbl_nombre.Text = Profesor.nombre;
-            lbl_dpto.Text = Profesor.departamento;
+            lbl_NUE.Text = User.NUE.ToString();
+            lbl_nombre.Text = User.nombre;
+            lbl_dpto.Text = User.departamento;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tutorados_profesor tutorados = new Tutorados_profesor();
+            tutorados.Show();
         }
     }
 }

@@ -8,13 +8,13 @@ namespace Kardex
 {
     class Profesor
     {
-        public static int NUE { get; set; }
-        public static string nombre { get; set; }
-        public static string direccion { get; set; }
-        public static string tel { get; set; }
-        public static int ext { get; set; }
-        public static int cub { get; set; }
-        public static string correo { get; set; }
-        public static string departamento { get; set; }
+        public int NUE { get; set; }
+        public string nombre { get; set; }
+        public string direccion { get; set; }
+        public string tel { get; set; }
+        public int ext { get; set; }
+        public int cub { get; set; }
+        public string correo { get; set; }
+        public string departamento { get; set; }
     }
 }

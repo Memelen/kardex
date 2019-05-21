@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kardex.Model;
+
 namespace Kardex
 {
     public partial class login : Form
@@ -20,11 +22,10 @@ namespace Kardex
         {
             try
             {
-                getProfesores profesores = new getProfesores();
-                getAlumnos alumnos = new getAlumnos();
-
-                Boolean teacher = profesores.login(txt_user.Text, txt_pass.Text);
-                Boolean student = alumnos.login(txt_user.Text, txt_pass.Text);
+                Log log = new Log();
+                             
+                bool student = log.LoginStudent(txt_user.Text, txt_pass.Text);
+                bool teacher = log.LoginTeacher(txt_user.Text, txt_pass.Text);
 
                 if (teacher)
                 {
@@ -33,8 +34,8 @@ namespace Kardex
                     this.Hide();
                 }
                 else if (student)
-                {
-                    MessageBox.Show("Es alumno");
+                {                   
+                    MessageBox.Show("Es alumno " +  User.NUA);
                 }
                 else
                 {
