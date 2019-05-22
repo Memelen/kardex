@@ -37,5 +37,10 @@ namespace Kardex.View
         {
             LoadData();
         }
+
+        private void list_tutorados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

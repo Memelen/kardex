@@ -48,11 +48,12 @@
             this.list_tutorados.UseCompatibleStateImageBehavior = false;
             this.list_tutorados.UseSelectable = true;
             this.list_tutorados.View = System.Windows.Forms.View.Details;
+            this.list_tutorados.SelectedIndexChanged += new System.EventHandler(this.list_tutorados_SelectedIndexChanged);
             // 
             // nombre
             // 
             this.nombre.Text = "Nombre";
-            this.nombre.Width = 317;
+            this.nombre.Width = 220;
             // 
             // correo
             // 
