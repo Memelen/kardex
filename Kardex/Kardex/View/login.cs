@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kardex.Model;
+using Kardex.View;
 
 namespace Kardex
 {
@@ -23,7 +24,7 @@ namespace Kardex
             try
             {
                 Log log = new Log();
-                             
+
                 bool student = log.LoginStudent(txt_user.Text, txt_pass.Text);
                 bool teacher = log.LoginTeacher(txt_user.Text, txt_pass.Text);
 
@@ -34,8 +35,8 @@ namespace Kardex
                     this.Hide();
                 }
                 else if (student)
-                {                   
-                    MessageBox.Show("Es alumno " +  User.NUA);
+                {
+                    MessageBox.Show("Es alumno " + User.NUA);
                 }
                 else
                 {
@@ -47,6 +48,8 @@ namespace Kardex
 
                 MessageBox.Show(ex.Message);
             }
+            
         }
+
     }
 }

@@ -43,7 +43,7 @@
             this.list_tutorados.Location = new System.Drawing.Point(38, 81);
             this.list_tutorados.Name = "list_tutorados";
             this.list_tutorados.OwnerDraw = true;
-            this.list_tutorados.Size = new System.Drawing.Size(612, 347);
+            this.list_tutorados.Size = new System.Drawing.Size(612, 249);
             this.list_tutorados.TabIndex = 0;
             this.list_tutorados.UseCompatibleStateImageBehavior = false;
             this.list_tutorados.UseSelectable = true;
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 481);
+            this.ClientSize = new System.Drawing.Size(716, 367);
             this.Controls.Add(this.list_tutorados);
             this.Name = "Tutorados_profesor";
             this.Text = "Tutorados_profesor";

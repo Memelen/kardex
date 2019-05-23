@@ -80,6 +80,7 @@ namespace Kardex.Model
             {
                 return false;
             }
+            User.passw = password;
             return true;
         }
     }

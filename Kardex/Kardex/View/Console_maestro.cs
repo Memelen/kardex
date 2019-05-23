@@ -18,15 +18,45 @@ namespace Kardex
         {
             InitializeComponent();
 
-            lbl_NUE.Text = User.NUE.ToString();
-            lbl_nombre.Text = User.nombre;
-            lbl_dpto.Text = User.departamento;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
-            Tutorados_profesor tutorados = new Tutorados_profesor();
-            tutorados.Show();
+            Application.Restart();
+            Environment.Exit(0);
+        }
+
+        private void AbrirFormulario<T>() where T : Form, new()
+        {
+            Form formulario = panel_forms.Controls.OfType<T>().FirstOrDefault();
+            if (formulario != null)
+            {
+                //Si la instancia esta minimizada la dejamos en su estado normal
+                if (formulario.WindowState == FormWindowState.Minimized)
+                {
+                    formulario.WindowState = FormWindowState.Normal;
+                }
+                //Si la instancia existe la pongo en primer plano
+                formulario.BringToFront();
+                return;
+            }
+            //Se abre el form
+            formulario = new T();
+            formulario.TopLevel = false;
+            panel_forms.Controls.Add(formulario);
+            panel_forms.Tag = formulario;
+            formulario.Show();
+        }
+
+        private void btn_profile_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Profile_profesor>();
+        }
+
+        private void btn_tutorados_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
