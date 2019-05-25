@@ -39,7 +39,8 @@ namespace Kardex.Model
                 User.tutor = reader.GetInt32(10);
                 User.nombre_tutor = reader.GetString(11) + " " + reader.GetString(12) + " " + reader.GetString(13);
             }
-
+            reader.Close();
+            connection.Close();
             if (User.NUA <= 0)
             {
                 return false;

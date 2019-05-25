@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Kardex.View
 {
-    public partial class SendMail : MetroFramework.Forms.MetroForm
+    public partial class SendMail : Form
     {
         public SendMail(string to_mail)
         {

@@ -12,5 +12,6 @@ namespace Kardex.Model
         public string nombre { get; set; }
         public string descrip { get; set; }
         public int creditos { get; set; }
+        public string grupo { get; set; }
     }
 }

@@ -40,8 +40,9 @@
             this.btn_profile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_forms = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbl_panelinfo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_minimize = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -166,6 +167,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -203,6 +205,7 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // btn_tutorados
             // 
@@ -300,21 +303,21 @@
             this.bunifuCustomLabel2.TabIndex = 7;
             this.bunifuCustomLabel2.Text = "Panel Profesores";
             // 
-            // bunifuCustomLabel1
+            // lbl_panelinfo
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(34, 26);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(203, 21);
-            this.bunifuCustomLabel1.TabIndex = 0;
-            this.bunifuCustomLabel1.Text = "Contacta a tus alumnos";
+            this.lbl_panelinfo.AutoSize = true;
+            this.lbl_panelinfo.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_panelinfo.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_panelinfo.Location = new System.Drawing.Point(34, 26);
+            this.lbl_panelinfo.Name = "lbl_panelinfo";
+            this.lbl_panelinfo.Size = new System.Drawing.Size(425, 21);
+            this.lbl_panelinfo.TabIndex = 0;
+            this.lbl_panelinfo.Text = "Recuerda mantenerte contactado con tus alumnos";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.bunifuCustomLabel1);
+            this.panel5.Controls.Add(this.lbl_panelinfo);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.Color.LightGray;
             this.panel5.Location = new System.Drawing.Point(200, 132);
@@ -322,12 +325,39 @@
             this.panel5.Size = new System.Drawing.Size(716, 67);
             this.panel5.TabIndex = 6;
             // 
+            // btn_minimize
+            // 
+            this.btn_minimize.ActiveBorderThickness = 1;
+            this.btn_minimize.ActiveCornerRadius = 20;
+            this.btn_minimize.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btn_minimize.ActiveForecolor = System.Drawing.Color.Black;
+            this.btn_minimize.ActiveLineColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_minimize.BackColor = System.Drawing.Color.White;
+            this.btn_minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_minimize.BackgroundImage")));
+            this.btn_minimize.ButtonText = "-";
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_minimize.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_minimize.IdleBorderThickness = 1;
+            this.btn_minimize.IdleCornerRadius = 20;
+            this.btn_minimize.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_minimize.IdleForecolor = System.Drawing.Color.Blue;
+            this.btn_minimize.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btn_minimize.Location = new System.Drawing.Point(867, 0);
+            this.btn_minimize.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(49, 35);
+            this.btn_minimize.TabIndex = 8;
+            this.btn_minimize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            // 
             // Console_maestro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(916, 566);
+            this.Controls.Add(this.btn_minimize);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel_forms);
@@ -358,7 +388,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuFlatButton btn_exit;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel panel5;
+        public Bunifu.Framework.UI.BunifuCustomLabel lbl_panelinfo;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_minimize;
     }
 }

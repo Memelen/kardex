@@ -35,6 +35,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_close = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SuspendLayout();
             // 
             // btn_login
@@ -140,12 +141,39 @@
             this.panel1.Size = new System.Drawing.Size(424, 427);
             this.panel1.TabIndex = 8;
             // 
+            // btn_close
+            // 
+            this.btn_close.ActiveBorderThickness = 1;
+            this.btn_close.ActiveCornerRadius = 20;
+            this.btn_close.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btn_close.ActiveForecolor = System.Drawing.Color.Black;
+            this.btn_close.ActiveLineColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_close.BackColor = System.Drawing.Color.White;
+            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
+            this.btn_close.ButtonText = "X";
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_close.IdleBorderThickness = 1;
+            this.btn_close.IdleCornerRadius = 20;
+            this.btn_close.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btn_close.IdleForecolor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_close.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btn_close.Location = new System.Drawing.Point(818, 0);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(24, 29);
+            this.btn_close.TabIndex = 9;
+            this.btn_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(844, 427);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -168,5 +196,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btn_close;
     }
 }

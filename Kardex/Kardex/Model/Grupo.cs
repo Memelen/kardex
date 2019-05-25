@@ -15,7 +15,9 @@ namespace Kardex.Model
         public string salon { get; set; }
         public string dias_clase { get; set; }
         public int materia { get; set; }
+        public string nombre_materia { get; set; }
         public int NUA { get; set; }
         public string alumno { get; set; }
+        public string semestre { get; set; }
     }
 }

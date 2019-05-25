@@ -99,10 +99,11 @@
   <ItemGroup>
     <Compile Include="Controller\getData.cs" />
     <Compile Include="Controller\insertData.cs" />
+    <Compile Include="Controller\UIControls.cs" />
     <Compile Include="Model\Alumno.cs" />
     <Compile Include="Model\Departamento.cs" />
     <Compile Include="Model\Grupo.cs" />
-    <Compile Include="Model\Kardex.cs" />
+    <Compile Include="Model\kardex.cs" />
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\Materia.cs" />
     <Compile Include="Model\User.cs" />
@@ -111,6 +112,18 @@
     </Compile>
     <Compile Include="View\Console_maestro.Designer.cs">
       <DependentUpon>Console_maestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail_materia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail_materia.Designer.cs">
+      <DependentUpon>Detail_materia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Materias_profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Materias_profesor.Designer.cs">
+      <DependentUpon>Materias_profesor.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Details_tutorado.cs">
       <SubType>Form</SubType>
@@ -127,6 +140,12 @@
     <Compile Include="Model\Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Horario_profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Horario_profesor.Designer.cs">
+      <DependentUpon>Horario_profesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Profile_profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +167,12 @@
     <EmbeddedResource Include="View\Console_maestro.resx">
       <DependentUpon>Console_maestro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail_materia.resx">
+      <DependentUpon>Detail_materia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Materias_profesor.resx">
+      <DependentUpon>Materias_profesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Details_tutorado.resx">
       <DependentUpon>Details_tutorado.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +188,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Horario_profesor.resx">
+      <DependentUpon>Horario_profesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Profile_profesor.resx">
       <DependentUpon>Profile_profesor.cs</DependentUpon>
     </EmbeddedResource>

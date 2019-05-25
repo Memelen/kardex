@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kardex.Model
 {
-    class Kardex
+    class kardex
     {
         public int NUA { get; set; }
         public int materia { get; set; }

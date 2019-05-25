@@ -27,6 +27,7 @@ namespace Kardex.View
         {
             SendMail mail = new SendMail(lbl_correo.Text);
             mail.Show();
+            this.Close();
         }
     }
 }

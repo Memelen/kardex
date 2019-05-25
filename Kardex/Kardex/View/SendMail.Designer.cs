@@ -40,7 +40,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 93);
+            this.metroLabel1.Location = new System.Drawing.Point(12, 19);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(35, 20);
             this.metroLabel1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 129);
+            this.metroLabel2.Location = new System.Drawing.Point(12, 55);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(52, 20);
             this.metroLabel2.TabIndex = 1;
@@ -58,7 +58,7 @@
             // txt_affair
             // 
             this.txt_affair.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_affair.Location = new System.Drawing.Point(99, 129);
+            this.txt_affair.Location = new System.Drawing.Point(88, 55);
             this.txt_affair.Name = "txt_affair";
             this.txt_affair.Size = new System.Drawing.Size(310, 26);
             this.txt_affair.TabIndex = 2;
@@ -68,9 +68,8 @@
             this.txt_to.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_to.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_to.HideSelection = false;
-            this.txt_to.Location = new System.Drawing.Point(80, 93);
+            this.txt_to.Location = new System.Drawing.Point(69, 19);
             this.txt_to.Name = "txt_to";
-            this.txt_to.ReadOnly = true;
             this.txt_to.Size = new System.Drawing.Size(329, 26);
             this.txt_to.TabIndex = 3;
             // 
@@ -78,7 +77,7 @@
             // 
             this.txt_msg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_msg.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_msg.Location = new System.Drawing.Point(23, 167);
+            this.txt_msg.Location = new System.Drawing.Point(12, 93);
             this.txt_msg.Name = "txt_msg";
             this.txt_msg.Size = new System.Drawing.Size(386, 199);
             this.txt_msg.TabIndex = 4;
@@ -87,7 +86,7 @@
             // btn_send
             // 
             this.btn_send.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btn_send.Location = new System.Drawing.Point(324, 398);
+            this.btn_send.Location = new System.Drawing.Point(313, 309);
             this.btn_send.Name = "btn_send";
             this.btn_send.Size = new System.Drawing.Size(85, 34);
             this.btn_send.TabIndex = 5;
@@ -101,7 +100,7 @@
             // 
             this.btn_back.DisplayFocus = true;
             this.btn_back.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btn_back.Location = new System.Drawing.Point(23, 398);
+            this.btn_back.Location = new System.Drawing.Point(12, 309);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(76, 34);
             this.btn_back.TabIndex = 6;
@@ -116,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 443);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(409, 353);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_send);
             this.Controls.Add(this.txt_msg);
@@ -124,7 +124,9 @@
             this.Controls.Add(this.txt_affair);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SendMail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo mensaje";
             this.Load += new System.EventHandler(this.SendMail_Load);
             this.ResumeLayout(false);
