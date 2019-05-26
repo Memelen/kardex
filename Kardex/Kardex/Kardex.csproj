@@ -131,6 +131,12 @@
     <Compile Include="View\Detail_materia.Designer.cs">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Detail_Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail_Materias.Designer.cs">
+      <DependentUpon>Detail_Materias.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Materias_profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="View\Horario_profesor.Designer.cs">
       <DependentUpon>Horario_profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profile_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profile_alumno.Designer.cs">
+      <DependentUpon>Profile_alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Profile_profesor.cs">
       <SubType>Form</SubType>
@@ -188,6 +200,9 @@
     <EmbeddedResource Include="View\Detail_materia.resx">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail_Materias.resx">
+      <DependentUpon>Detail_Materias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Materias_profesor.resx">
       <DependentUpon>Materias_profesor.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </Compile>
     <EmbeddedResource Include="View\Horario_profesor.resx">
       <DependentUpon>Horario_profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profile_alumno.resx">
+      <DependentUpon>Profile_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Profile_profesor.resx">
       <DependentUpon>Profile_profesor.cs</DependentUpon>

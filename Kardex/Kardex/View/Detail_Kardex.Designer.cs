@@ -35,7 +35,6 @@
             this.Calif = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Estatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Semestre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // list_Kardex
@@ -48,10 +47,10 @@
             this.Estatus,
             this.Semestre});
             this.list_Kardex.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.list_Kardex.Location = new System.Drawing.Point(14, 58);
-            this.list_Kardex.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.list_Kardex.Location = new System.Drawing.Point(4, 5);
+            this.list_Kardex.Margin = new System.Windows.Forms.Padding(5);
             this.list_Kardex.Name = "list_Kardex";
-            this.list_Kardex.Size = new System.Drawing.Size(501, 236);
+            this.list_Kardex.Size = new System.Drawing.Size(502, 289);
             this.list_Kardex.TabIndex = 2;
             this.list_Kardex.UseCompatibleStateImageBehavior = false;
             this.list_Kardex.View = System.Windows.Forms.View.Details;
@@ -59,6 +58,7 @@
             // Materia
             // 
             this.Materia.Text = "Materia";
+            this.Materia.Width = 140;
             // 
             // Oportunidad
             // 
@@ -75,35 +75,26 @@
             // Estatus
             // 
             this.Estatus.Text = "Estatus";
+            this.Estatus.Width = 70;
             // 
             // Semestre
             // 
             this.Semestre.Text = "Semestre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Kardex";
+            this.Semestre.Width = 90;
             // 
             // Detail_Kardex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 308);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(510, 308);
             this.Controls.Add(this.list_Kardex);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Detail_Kardex";
             this.Text = "Detail_Kardex";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -116,6 +107,5 @@
         private System.Windows.Forms.ColumnHeader Calif;
         private System.Windows.Forms.ColumnHeader Estatus;
         private System.Windows.Forms.ColumnHeader Semestre;
-        private System.Windows.Forms.Label label1;
     }
 }
