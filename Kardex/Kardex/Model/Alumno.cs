@@ -11,6 +11,8 @@ namespace Kardex
     {
         public int NUA { get; set; }
         public string nombre { get; set; }
+        public string a_paterno { get; set; }
+        public string a_materno { get; set; }
         public string direccion { get; set; }
         public string tel { get; set; }
         public int semestre { get; set; }
@@ -19,5 +21,6 @@ namespace Kardex
         public int tutor { get; set; }
         public string nombre_tutor { get; set; }
         public string correo { get; set; }
+        public string passw { get; set; }
     }
 }

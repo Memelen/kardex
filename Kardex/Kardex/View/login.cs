@@ -55,5 +55,11 @@ namespace Kardex
         {
             Application.Exit();
         }
+
+        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
+        {
+            new SuperUser_Panel().Show();
+            this.Hide();
+        }
     }
 }

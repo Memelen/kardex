@@ -97,9 +97,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\deleteData.cs" />
     <Compile Include="Controller\getData.cs" />
     <Compile Include="Controller\insertData.cs" />
     <Compile Include="Controller\UIControls.cs" />
+    <Compile Include="Controller\updateData.cs" />
     <Compile Include="Model\Alumno.cs" />
     <Compile Include="Model\Departamento.cs" />
     <Compile Include="Model\Grupo.cs" />
@@ -158,6 +160,36 @@
     <Compile Include="View\SendMail.Designer.cs">
       <DependentUpon>SendMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SuperUser_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SuperUser_Panel.Designer.cs">
+      <DependentUpon>SuperUser_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SU_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SU_Alumno.Designer.cs">
+      <DependentUpon>SU_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SU_Grupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SU_Grupo.Designer.cs">
+      <DependentUpon>SU_Grupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SU_Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SU_Materias.Designer.cs">
+      <DependentUpon>SU_Materias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SU_Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SU_Profesor.Designer.cs">
+      <DependentUpon>SU_Profesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Tutorados_profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +228,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SendMail.resx">
       <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SuperUser_Panel.resx">
+      <DependentUpon>SuperUser_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SU_Alumno.resx">
+      <DependentUpon>SU_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SU_Grupo.resx">
+      <DependentUpon>SU_Grupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SU_Materias.resx">
+      <DependentUpon>SU_Materias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SU_Profesor.resx">
+      <DependentUpon>SU_Profesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tutorados_profesor.resx">
       <DependentUpon>Tutorados_profesor.cs</DependentUpon>

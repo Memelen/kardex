@@ -26,7 +26,10 @@ namespace Kardex.View
         private void lbl_correo_Click(object sender, EventArgs e)
         {
             SendMail mail = new SendMail(lbl_correo.Text);
+            mail.BringToFront();
+            mail.WindowState = FormWindowState.Normal;
             mail.Show();
+            
             this.Close();
         }
     }

@@ -39,7 +39,6 @@
             this.btn_asistencias = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_cali = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txt_values = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_panelinfo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
@@ -186,29 +185,20 @@
             this.txt_values.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txt_values.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_values.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_values.HintText = "";
+            this.txt_values.HintText = "Inserte el valor a agregar";
             this.txt_values.isPassword = false;
             this.txt_values.LineFocusedColor = System.Drawing.Color.SteelBlue;
             this.txt_values.LineIdleColor = System.Drawing.Color.LightGray;
             this.txt_values.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
             this.txt_values.LineThickness = 3;
-            this.txt_values.Location = new System.Drawing.Point(477, 123);
+            this.txt_values.Location = new System.Drawing.Point(462, 123);
             this.txt_values.Margin = new System.Windows.Forms.Padding(4);
             this.txt_values.MaxLength = 32767;
             this.txt_values.Name = "txt_values";
-            this.txt_values.Size = new System.Drawing.Size(193, 36);
+            this.txt_values.Size = new System.Drawing.Size(208, 36);
             this.txt_values.TabIndex = 5;
+            this.txt_values.Text = "Inserte el valor ...";
             this.txt_values.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(371, 140);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(99, 19);
-            this.bunifuCustomLabel1.TabIndex = 6;
-            this.bunifuCustomLabel1.Text = "Inserte el valor:";
             // 
             // lbl_panelinfo
             // 
@@ -241,7 +231,6 @@
             this.ClientSize = new System.Drawing.Size(1052, 420);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.lbl_panelinfo);
-            this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.txt_values);
             this.Controls.Add(this.btn_cali);
             this.Controls.Add(this.btn_asistencias);
@@ -270,7 +259,6 @@
         private System.Windows.Forms.ColumnHeader cali;
         private Bunifu.Framework.UI.BunifuFlatButton btn_cali;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_values;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         public Bunifu.Framework.UI.BunifuCustomLabel lbl_panelinfo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
     }

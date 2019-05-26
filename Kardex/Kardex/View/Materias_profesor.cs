@@ -34,8 +34,9 @@ namespace Kardex.View
             string grupo = list_materias.Items[list_materias.FocusedItem.Index].SubItems[1].Text;
             Detail_materia details = new Detail_materia(grupo);
             details.lbl_materia.Text = list_materias.Items[list_materias.FocusedItem.Index].SubItems[0].Text;
-            details.lbl_grupo.Text = grupo;
+            details.lbl_grupo.Text = grupo;            
             details.Show();
+            details.BringToFront();
         }
 
     }

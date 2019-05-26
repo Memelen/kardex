@@ -73,19 +73,18 @@
             this.txt_user.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_user.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_user.HintText = "";
+            this.txt_user.HintText = "Usuario";
             this.txt_user.isPassword = false;
             this.txt_user.LineFocusedColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_user.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_user.LineMouseHoverColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_user.LineThickness = 2;
-            this.txt_user.Location = new System.Drawing.Point(462, 184);
+            this.txt_user.Location = new System.Drawing.Point(486, 183);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4);
             this.txt_user.MaxLength = 32767;
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(323, 32);
             this.txt_user.TabIndex = 4;
-            this.txt_user.Text = "Usuario";
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_pass
@@ -97,19 +96,18 @@
             this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_pass.HintForeColor = System.Drawing.Color.Empty;
-            this.txt_pass.HintText = "";
+            this.txt_pass.HintText = "contraseña";
             this.txt_pass.isPassword = true;
             this.txt_pass.LineFocusedColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_pass.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_pass.LineMouseHoverColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_pass.LineThickness = 2;
-            this.txt_pass.Location = new System.Drawing.Point(462, 254);
+            this.txt_pass.Location = new System.Drawing.Point(486, 254);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.MaxLength = 32767;
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(323, 32);
             this.txt_pass.TabIndex = 5;
-            this.txt_pass.Text = "contraseña";
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -131,6 +129,7 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(345, 28);
             this.bunifuCustomLabel2.TabIndex = 7;
             this.bunifuCustomLabel2.Text = "Accede mediante tu cuenta institucional";
+            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // panel1
             // 

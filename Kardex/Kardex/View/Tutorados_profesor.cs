@@ -47,8 +47,10 @@ namespace Kardex.View
             details.lbl_semestre.Text = list[list_tutorados.FocusedItem.Index].semestre.ToString() + " Semestre";
             details.lbl_correo.Text = list[list_tutorados.FocusedItem.Index].correo;
             details.lbl_NUA.Text = list[list_tutorados.FocusedItem.Index].NUA.ToString();
-            details.Show();
             details.BringToFront();
+            details.WindowState = FormWindowState.Normal;
+            details.Show();
+            
         }
     }
 }

@@ -15,6 +15,9 @@ namespace Kardex
         public int ext { get; set; }
         public int cub { get; set; }
         public string correo { get; set; }
+        public string passw { get; set; }
         public string departamento { get; set; }
+        public string a_pateno { get; set; }
+        public string a_materno { get; set; }
     }
 }
