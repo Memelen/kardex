@@ -169,6 +169,37 @@ namespace Kardex.Controller
                 }
             }
         }
+        public static void getKardex(ListView listView)
+        {
+            listView.Items.Clear();
+            using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlParameter nuaParameter = new SqlParameter("@nua", User.NUA);
+                    SqlCommand command = new SqlCommand("select nombre, op, grupo, cali, estatus, semestre from dbo.kardex, dbo.materia where dbo.kardex.NUA=@nua and dbo.kardex.materia=dbo.materia.id_materia;", connection);
+                    command.Parameters.Add(nuaParameter);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["nombre"].ToString());
+                        item.SubItems.Add(reader["op"].ToString());
+                        item.SubItems.Add(reader["grupo"].ToString());
+                        item.SubItems.Add(reader["cali"].ToString());
+                        item.SubItems.Add(reader["estatus"].ToString());
+                        item.SubItems.Add(reader["semestre"].ToString());
+                        listView.Items.Add(item);
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 
     

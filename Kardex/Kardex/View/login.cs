@@ -36,7 +36,9 @@ namespace Kardex
                 }
                 else if (student)
                 {
-                    MessageBox.Show("Es alumno " + User.NUA);
+                    Console_alumno form = new Console_alumno();
+                    form.ShowDialog();
+                    this.Hide();
                 }
                 else
                 {

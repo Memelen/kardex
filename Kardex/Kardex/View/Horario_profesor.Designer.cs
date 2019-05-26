@@ -43,9 +43,10 @@
             this.cB_days.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.cB_days.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.cB_days.FormattingEnabled = true;
-            this.cB_days.Location = new System.Drawing.Point(416, 23);
+            this.cB_days.Location = new System.Drawing.Point(312, 19);
+            this.cB_days.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cB_days.Name = "cB_days";
-            this.cB_days.Size = new System.Drawing.Size(247, 31);
+            this.cB_days.Size = new System.Drawing.Size(186, 27);
             this.cB_days.TabIndex = 13;
             this.cB_days.SelectedIndexChanged += new System.EventHandler(this.cB_days_SelectedIndexChanged);
             // 
@@ -55,9 +56,10 @@
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(8, 31);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(6, 25);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(383, 34);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(298, 30);
             this.bunifuCustomLabel2.TabIndex = 14;
             this.bunifuCustomLabel2.Text = "Seleccione el día de la semana para obtener su horario\r\n\r\n";
             // 
@@ -70,9 +72,10 @@
             this.horario,
             this.grupo});
             this.listV_days.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listV_days.Location = new System.Drawing.Point(12, 101);
+            this.listV_days.Location = new System.Drawing.Point(9, 82);
+            this.listV_days.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listV_days.Name = "listV_days";
-            this.listV_days.Size = new System.Drawing.Size(692, 254);
+            this.listV_days.Size = new System.Drawing.Size(520, 207);
             this.listV_days.TabIndex = 1;
             this.listV_days.UseCompatibleStateImageBehavior = false;
             this.listV_days.View = System.Windows.Forms.View.Details;
@@ -104,14 +107,15 @@
             // 
             // Horario_profesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(716, 367);
+            this.ClientSize = new System.Drawing.Size(537, 298);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.listV_days);
             this.Controls.Add(this.cB_days);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Horario_profesor";
             this.Text = "Materias_profesor";
             this.Load += new System.EventHandler(this.Materias_profesor_Load);

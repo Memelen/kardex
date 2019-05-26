@@ -52,7 +52,7 @@
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Pictures\Icons\UI\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu-Ui-Winform-1.10.0.0\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -107,11 +107,23 @@
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\Materia.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="View\Console_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Console_alumno.Designer.cs">
+      <DependentUpon>Console_alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Console_maestro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Console_maestro.Designer.cs">
       <DependentUpon>Console_maestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail_Kardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail_Kardex.Designer.cs">
+      <DependentUpon>Detail_Kardex.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Detail_materia.cs">
       <SubType>Form</SubType>
@@ -164,8 +176,14 @@
     <Compile Include="View\Tutorados_profesor.Designer.cs">
       <DependentUpon>Tutorados_profesor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Console_alumno.resx">
+      <DependentUpon>Console_alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Console_maestro.resx">
       <DependentUpon>Console_maestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail_Kardex.resx">
+      <DependentUpon>Detail_Kardex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Detail_materia.resx">
       <DependentUpon>Detail_materia.cs</DependentUpon>
@@ -201,6 +219,67 @@
       <DependentUpon>Tutorados_profesor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bunifu.Framework.BunifuCustomTextbox.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.BunifuDeveloperLicenseStatus.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.Lib.Elipse.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.Lib.identity.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.Lib.RestAPI.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.License+UserType.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.License.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.LICENSE.License.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.LicenseObject.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCards.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCheckbox.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCircleProgressbar.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuColorTransition.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCustomControl.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCustomDataGrid.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuCustomLabel.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuDatepicker.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuDragControl.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuDropdown.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuElipse.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuFlatButton.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuForm.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuFormFadeTransition.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuGauge.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuGradientPanel.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuHTTP_Utils.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuImageButton.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuiOSSwitch.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuMaterialTextbox.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuMetroTextbox.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuProgressBar.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuRange.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuRating.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuSearchEngine.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuSeparator.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuSlider.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuSwitch.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuThinButton2.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuTileButton.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuTrackbar.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuUserControl.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuVTrackbar.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.BunifuWebClient.datasource" />
+    <None Include="Properties\DataSources\Bunifu.Framework.UI.Drag.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.Animation.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.AnimationCompletedEventArg.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.BunifuTransition.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.Controller.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.DoubleBitmapControl.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.DoubleBitmapForm.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.Flags+WindowStyles.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.Flags.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.IFakeControl.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.NonLinearTransfromNeededEventArg.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.PointFConverter.datasource" />
+    <None Include="Properties\DataSources\BunifuAnimatorNS.TransfromNeededEventArg.datasource" />
+    <None Include="Properties\DataSources\SecureTeam.Attributes.ObfuscatedByAgileDotNetAttribute.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsControlLibrary1.AtestControl.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsControlLibrary1.BunifuCustomTextbox.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsControlLibrary1.transparentBg1.datasource" />
+    <None Include="Properties\DataSources\{FE3C441D-DF9D-407b-917D-0B4471A8296C}.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

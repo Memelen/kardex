@@ -57,16 +57,18 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 566);
+            this.panel1.Size = new System.Drawing.Size(150, 460);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(102, 95);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -74,9 +76,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(99)))), ((int)(((byte)(182)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 135);
+            this.panel3.Location = new System.Drawing.Point(0, 110);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 67);
+            this.panel3.Size = new System.Drawing.Size(150, 54);
             this.panel3.TabIndex = 1;
             // 
             // panel2
@@ -88,9 +91,10 @@
             this.panel2.Controls.Add(this.btn_tutorados);
             this.panel2.Controls.Add(this.btn_profile);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 202);
+            this.panel2.Location = new System.Drawing.Point(0, 164);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 364);
+            this.panel2.Size = new System.Drawing.Size(150, 296);
             this.panel2.TabIndex = 0;
             // 
             // btn_exit
@@ -116,14 +120,13 @@
             this.btn_exit.IconVisible = true;
             this.btn_exit.IconZoom = 90D;
             this.btn_exit.IsTab = false;
-            this.btn_exit.Location = new System.Drawing.Point(0, 236);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_exit.Location = new System.Drawing.Point(0, 192);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_exit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_exit.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_exit.selected = false;
-            this.btn_exit.Size = new System.Drawing.Size(200, 59);
+            this.btn_exit.Size = new System.Drawing.Size(150, 48);
             this.btn_exit.TabIndex = 4;
             this.btn_exit.Text = "Cerrar sesión";
             this.btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,14 +157,13 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 177);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 144);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(200, 59);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(150, 48);
             this.bunifuFlatButton4.TabIndex = 3;
             this.bunifuFlatButton4.Text = "Materias";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,14 +194,13 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 118);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 96);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(200, 59);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(150, 48);
             this.bunifuFlatButton3.TabIndex = 2;
             this.bunifuFlatButton3.Text = "Horario";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,14 +231,13 @@
             this.btn_tutorados.IconVisible = true;
             this.btn_tutorados.IconZoom = 90D;
             this.btn_tutorados.IsTab = false;
-            this.btn_tutorados.Location = new System.Drawing.Point(0, 59);
-            this.btn_tutorados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_tutorados.Location = new System.Drawing.Point(0, 48);
             this.btn_tutorados.Name = "btn_tutorados";
             this.btn_tutorados.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_tutorados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_tutorados.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_tutorados.selected = false;
-            this.btn_tutorados.Size = new System.Drawing.Size(200, 59);
+            this.btn_tutorados.Size = new System.Drawing.Size(150, 48);
             this.btn_tutorados.TabIndex = 1;
             this.btn_tutorados.Text = "Tutorados";
             this.btn_tutorados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,13 +269,12 @@
             this.btn_profile.IconZoom = 90D;
             this.btn_profile.IsTab = false;
             this.btn_profile.Location = new System.Drawing.Point(0, 0);
-            this.btn_profile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_profile.Name = "btn_profile";
             this.btn_profile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_profile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
             this.btn_profile.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_profile.selected = false;
-            this.btn_profile.Size = new System.Drawing.Size(200, 59);
+            this.btn_profile.Size = new System.Drawing.Size(150, 48);
             this.btn_profile.TabIndex = 0;
             this.btn_profile.Text = "Perfil";
             this.btn_profile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,9 +286,10 @@
             // 
             this.panel_forms.BackColor = System.Drawing.Color.White;
             this.panel_forms.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_forms.Location = new System.Drawing.Point(200, 199);
+            this.panel_forms.Location = new System.Drawing.Point(150, 162);
+            this.panel_forms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_forms.Name = "panel_forms";
-            this.panel_forms.Size = new System.Drawing.Size(716, 367);
+            this.panel_forms.Size = new System.Drawing.Size(537, 298);
             this.panel_forms.TabIndex = 5;
             // 
             // bunifuCustomLabel2
@@ -297,9 +297,10 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(206, 71);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(154, 58);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(267, 45);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(219, 37);
             this.bunifuCustomLabel2.TabIndex = 7;
             this.bunifuCustomLabel2.Text = "Panel Profesores";
             // 
@@ -308,9 +309,10 @@
             this.lbl_panelinfo.AutoSize = true;
             this.lbl_panelinfo.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_panelinfo.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_panelinfo.Location = new System.Drawing.Point(34, 26);
+            this.lbl_panelinfo.Location = new System.Drawing.Point(26, 21);
+            this.lbl_panelinfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_panelinfo.Name = "lbl_panelinfo";
-            this.lbl_panelinfo.Size = new System.Drawing.Size(425, 21);
+            this.lbl_panelinfo.Size = new System.Drawing.Size(352, 17);
             this.lbl_panelinfo.TabIndex = 0;
             this.lbl_panelinfo.Text = "Recuerda mantenerte contactado con tus alumnos";
             // 
@@ -320,9 +322,10 @@
             this.panel5.Controls.Add(this.lbl_panelinfo);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.Color.LightGray;
-            this.panel5.Location = new System.Drawing.Point(200, 132);
+            this.panel5.Location = new System.Drawing.Point(150, 108);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(716, 67);
+            this.panel5.Size = new System.Drawing.Size(537, 54);
             this.panel5.TabIndex = 6;
             // 
             // btn_minimize
@@ -343,26 +346,27 @@
             this.btn_minimize.IdleFillColor = System.Drawing.Color.Transparent;
             this.btn_minimize.IdleForecolor = System.Drawing.Color.Blue;
             this.btn_minimize.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btn_minimize.Location = new System.Drawing.Point(867, 0);
-            this.btn_minimize.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_minimize.Location = new System.Drawing.Point(650, 0);
+            this.btn_minimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(49, 35);
+            this.btn_minimize.Size = new System.Drawing.Size(37, 28);
             this.btn_minimize.TabIndex = 8;
             this.btn_minimize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
             // Console_maestro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(916, 566);
+            this.ClientSize = new System.Drawing.Size(687, 460);
             this.Controls.Add(this.btn_minimize);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel_forms);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Console_maestro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Console_maestro";

@@ -48,9 +48,10 @@
             // 
             this.lbl_materia.AutoSize = true;
             this.lbl_materia.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_materia.Location = new System.Drawing.Point(36, 20);
+            this.lbl_materia.Location = new System.Drawing.Point(27, 16);
+            this.lbl_materia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_materia.Name = "lbl_materia";
-            this.lbl_materia.Size = new System.Drawing.Size(115, 38);
+            this.lbl_materia.Size = new System.Drawing.Size(89, 30);
             this.lbl_materia.TabIndex = 0;
             this.lbl_materia.Text = "Materia";
             // 
@@ -58,9 +59,10 @@
             // 
             this.lbl_grupo.AutoSize = true;
             this.lbl_grupo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_grupo.Location = new System.Drawing.Point(64, 68);
+            this.lbl_grupo.Location = new System.Drawing.Point(48, 55);
+            this.lbl_grupo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_grupo.Name = "lbl_grupo";
-            this.lbl_grupo.Size = new System.Drawing.Size(58, 23);
+            this.lbl_grupo.Size = new System.Drawing.Size(48, 19);
             this.lbl_grupo.TabIndex = 1;
             this.lbl_grupo.Text = "Grupo";
             // 
@@ -72,9 +74,10 @@
             this.asistencias,
             this.cali});
             this.list_alumnos.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.list_alumnos.Location = new System.Drawing.Point(12, 166);
+            this.list_alumnos.Location = new System.Drawing.Point(9, 135);
+            this.list_alumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.list_alumnos.Name = "list_alumnos";
-            this.list_alumnos.Size = new System.Drawing.Size(1019, 221);
+            this.list_alumnos.Size = new System.Drawing.Size(765, 180);
             this.list_alumnos.TabIndex = 2;
             this.list_alumnos.UseCompatibleStateImageBehavior = false;
             this.list_alumnos.View = System.Windows.Forms.View.Details;
@@ -123,14 +126,13 @@
             this.btn_asistencias.IconVisible = true;
             this.btn_asistencias.IconZoom = 90D;
             this.btn_asistencias.IsTab = false;
-            this.btn_asistencias.Location = new System.Drawing.Point(889, 125);
-            this.btn_asistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_asistencias.Location = new System.Drawing.Point(667, 102);
             this.btn_asistencias.Name = "btn_asistencias";
             this.btn_asistencias.Normalcolor = System.Drawing.Color.White;
             this.btn_asistencias.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_asistencias.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_asistencias.selected = false;
-            this.btn_asistencias.Size = new System.Drawing.Size(142, 34);
+            this.btn_asistencias.Size = new System.Drawing.Size(106, 28);
             this.btn_asistencias.TabIndex = 3;
             this.btn_asistencias.Text = "Asistencia";
             this.btn_asistencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,14 +164,13 @@
             this.btn_cali.IconVisible = true;
             this.btn_cali.IconZoom = 90D;
             this.btn_cali.IsTab = false;
-            this.btn_cali.Location = new System.Drawing.Point(695, 125);
-            this.btn_cali.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cali.Location = new System.Drawing.Point(521, 102);
             this.btn_cali.Name = "btn_cali";
             this.btn_cali.Normalcolor = System.Drawing.Color.White;
             this.btn_cali.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_cali.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_cali.selected = false;
-            this.btn_cali.Size = new System.Drawing.Size(151, 34);
+            this.btn_cali.Size = new System.Drawing.Size(113, 28);
             this.btn_cali.TabIndex = 4;
             this.btn_cali.Text = "Calificación";
             this.btn_cali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,11 +193,10 @@
             this.txt_values.LineIdleColor = System.Drawing.Color.LightGray;
             this.txt_values.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
             this.txt_values.LineThickness = 3;
-            this.txt_values.Location = new System.Drawing.Point(477, 123);
-            this.txt_values.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_values.Location = new System.Drawing.Point(358, 100);
             this.txt_values.MaxLength = 32767;
             this.txt_values.Name = "txt_values";
-            this.txt_values.Size = new System.Drawing.Size(193, 36);
+            this.txt_values.Size = new System.Drawing.Size(145, 29);
             this.txt_values.TabIndex = 5;
             this.txt_values.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -204,9 +204,10 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(371, 140);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(278, 114);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(99, 19);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(78, 13);
             this.bunifuCustomLabel1.TabIndex = 6;
             this.bunifuCustomLabel1.Text = "Inserte el valor:";
             // 
@@ -215,9 +216,10 @@
             this.lbl_panelinfo.AutoSize = true;
             this.lbl_panelinfo.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_panelinfo.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_panelinfo.Location = new System.Drawing.Point(12, 138);
+            this.lbl_panelinfo.Location = new System.Drawing.Point(9, 112);
+            this.lbl_panelinfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_panelinfo.Name = "lbl_panelinfo";
-            this.lbl_panelinfo.Size = new System.Drawing.Size(207, 21);
+            this.lbl_panelinfo.Size = new System.Drawing.Size(171, 17);
             this.lbl_panelinfo.TabIndex = 7;
             this.lbl_panelinfo.Text = "Seleccione los alumnos ";
             // 
@@ -226,19 +228,20 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(1021, 9);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(766, 7);
+            this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(19, 20);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(15, 15);
             this.bunifuCustomLabel3.TabIndex = 9;
             this.bunifuCustomLabel3.Text = "X";
             this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // Detail_materia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1052, 420);
+            this.ClientSize = new System.Drawing.Size(789, 341);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.lbl_panelinfo);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -249,6 +252,7 @@
             this.Controls.Add(this.lbl_grupo);
             this.Controls.Add(this.lbl_materia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Detail_materia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail_materia";
