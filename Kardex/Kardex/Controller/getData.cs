@@ -200,34 +200,6 @@ namespace Kardex.Controller
                 }
             }
         }
-        public static void getMateriasAl(ListView listView)
-        {
-            listView.Items.Clear();
-            using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
-            {
-                try
-                {
-                    connection.Open();
-                    SqlParameter nuaParameter = new SqlParameter("@nua", User.NUA);
-                    SqlCommand command = new SqlCommand("select id_materia, nombre, descrip, creditos from dbo.kardex, dbo.materia where dbo.kardex.NUA=@nua and dbo.kardex.materia=dbo.materia.id_materia;", connection);
-                    command.Parameters.Add(nuaParameter);
-                    SqlDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        ListViewItem item = new ListViewItem(reader["nombre"].ToString());
-                        item.SubItems.Add(reader["descrip"].ToString());
-                        item.SubItems.Add(reader["creditos"].ToString());
-                        listView.Items.Add(item);
-                    }
-                    reader.Close();
-                    connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
     }
 
     
