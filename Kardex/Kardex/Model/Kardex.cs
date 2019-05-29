@@ -13,9 +13,10 @@ namespace Kardex.Model
         public string nombre_materia { get; set; }
         public int op { get; set; }
         public string grupo { get; set; }
-        public int cal { get; set; }
+        public string cal { get; set; }
         public string estatus { get; set; }
         public int semestre { get; set; }
         public int asistencia { get; set; }
+        public string periodo { get; set; }
     }
 }

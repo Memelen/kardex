@@ -52,7 +52,7 @@ namespace Kardex.Controller
                     SqlCommand command = new SqlCommand("UPDATE KARDEX SET asistencias=@asistencia WHERE NUA=@NUA", connection);
                     command.Parameters.Add(asisParameter);
                     command.Parameters.Add(NUAParameter);
-                    command.ExecuteNonQuery();                    
+                    command.ExecuteNonQuery();
                     connection.Close();
                 }
                 catch (Exception ex)
@@ -62,16 +62,27 @@ namespace Kardex.Controller
             }
         }
 
-        public static void InsertCalificacion(int calificacion, int NUA)
-        {            
+        public static void InsertCalificacion(string calificacion, int NUA)
+        {
             using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
             {
                 string status = "Aprobado";
 
-                if (calificacion < 7)
+                if (int.TryParse(calificacion, out int a))
                 {
-                    status = "Reprobado";
+                    if (a < 7)
+                    {
+                        status = "Reprobado";
+                    }
                 }
+
+                if (calificacion == "NC")
+                {
+                    status = "No Cursó";
+                }
+
+
+
 
                 try
                 {
@@ -123,7 +134,7 @@ namespace Kardex.Controller
                     commandProf.Parameters.Add(emailParameter);
                     commandProf.Parameters.Add(passParameter);
                     commandProf.ExecuteNonQuery();
-                    
+
                     connection.Close();
                 }
                 catch (Exception ex)
@@ -201,7 +212,7 @@ namespace Kardex.Controller
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message+ "HERE");
+                    MessageBox.Show(ex.Message + "HERE");
                 }
             }
         }
@@ -237,6 +248,92 @@ namespace Kardex.Controller
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public static void AddKardex(ListView listView)
+        {
+            List<kardex> kardex = new List<kardex>(getData.GetKadex());
+            int op = 1;
+
+            foreach (ListViewItem item in listView.Items)
+            {
+                foreach (kardex materia in kardex)
+                {
+                    if (Convert.ToInt32(item.SubItems[0].Text) == materia.materia)
+                    {
+                        if (materia.estatus != "Aprobado" && materia.op < 3)
+                        {
+                            op += 1;
+                        }
+
+                        if (materia.estatus == "Aprobado")
+                        {
+                            listView.Items[item.Index].Remove();
+                            MessageBox.Show("ERROR: Materia ya cursada");
+                            return;
+                        }
+                    }
+                }
+
+                int semestre = User.semestre + 1;
+                using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        SqlParameter NUAParameter = new SqlParameter("@NUA", User.NUA);
+                        SqlParameter matParameter = new SqlParameter("@materia", item.SubItems[0].Text);
+                        SqlParameter opParameter = new SqlParameter("@op", op);
+                        SqlParameter grupoParameter = new SqlParameter("@grupo", item.SubItems[4].Text);
+                        SqlParameter semestreParameter = new SqlParameter("@semestre", semestre);
+
+                        SqlCommand command = new SqlCommand("INSERT INTO KARDEX " +
+                            "VALUES( @NUA, @materia, @op, @grupo, 0, 'Cursando', @semestre, 0 )", connection);
+
+                        command.Parameters.Add(NUAParameter);
+                        command.Parameters.Add(matParameter);
+                        command.Parameters.Add(opParameter);
+                        command.Parameters.Add(grupoParameter);
+                        command.Parameters.Add(semestreParameter);
+                        command.ExecuteNonQuery();
+
+                        connection.Close();
+                        AddDetalle_Grupo(item.SubItems[4].Text);
+                        MessageBox.Show("Insertado");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private static void AddDetalle_Grupo(string grupo)
+        {
+            using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+            {
+                try
+                {
+                    connection.Open();
+
+                    SqlParameter NUAParameter = new SqlParameter("@NUA", User.NUA);
+                    SqlParameter grupoParameter = new SqlParameter("@grupo", grupo);
+                    SqlCommand command = new SqlCommand("INSERT INTO DETALLE_GRUPO " +
+                        "VALUES( @grupo, @NUA )", connection);
+
+                    command.Parameters.Add(NUAParameter);
+                    command.Parameters.Add(grupoParameter);
+                    command.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "here");
                 }
             }
         }

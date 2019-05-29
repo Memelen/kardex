@@ -40,7 +40,7 @@ namespace Kardex.View
         {
             foreach (ListViewItem item in list_alumnos.SelectedItems)
             {
-                insertData.InsertCalificacion(Convert.ToInt32(txt_values.Text), Convert.ToInt32(item.SubItems[0].Text));
+                insertData.InsertCalificacion(txt_values.Text, Convert.ToInt32(item.SubItems[0].Text));
             }
             getData.GetAlumnos(list_alumnos, consult_grupo);
         }

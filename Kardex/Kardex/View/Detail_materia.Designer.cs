@@ -197,7 +197,6 @@
             this.txt_values.Name = "txt_values";
             this.txt_values.Size = new System.Drawing.Size(208, 36);
             this.txt_values.TabIndex = 5;
-            this.txt_values.Text = "Inserte el valor ...";
             this.txt_values.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lbl_panelinfo

@@ -133,5 +133,6 @@ namespace Kardex.Controller
             sU_.btn_register.Visible = false;
             sU_.Show();
         }
+
     }
 }

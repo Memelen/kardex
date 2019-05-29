@@ -356,7 +356,7 @@ namespace Kardex.Controller
                 try
                 {
                     connection.Open();
-
+                    
                     SqlCommand command = new SqlCommand("SELECT * FROM GRUPO ORDER BY semestre DESC", connection);
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -370,7 +370,7 @@ namespace Kardex.Controller
                             salon = reader.GetString(3),
                             dias_clase = reader.GetString(4),
                             materia = reader.GetInt32(5),
-                            semestre = reader.GetString(6)
+                            semestre = reader.GetString(6),                       
                         };
                         list.Add(grupo);
                     }
@@ -384,6 +384,88 @@ namespace Kardex.Controller
             }
             return list;
         }
+
+        public static List<kardex> GetKadex()
+        {
+            List<kardex> list = new List<kardex>();
+
+            using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlParameter NUAParameter = new SqlParameter("@NUA",User.NUA);
+                    SqlCommand command = new SqlCommand("SELECT NUA, KARDEX.materia, nombre, op, grupo, cali, estatus, KARDEX.semestre, asistencias, GRUPO.semestre " +
+                        "FROM KARDEX, MATERIA, GRUPO WHERE NUA=@NUA AND KARDEX.materia=id_materia AND grupo=id_grupo ", connection);
+                    command.Parameters.Add(NUAParameter);
+                             
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        kardex kardex = new kardex
+                        {
+                            NUA = reader.GetInt32(0),
+                            materia = reader.GetInt32(1),
+                            nombre_materia = reader.GetString(2),
+                            op = reader.GetInt32(3),
+                            grupo = reader.GetString(4),
+                            cal = reader.GetString(5),
+                            estatus = reader.GetString(6),
+                            semestre = reader.GetInt32(7),
+                            asistencia = reader.GetInt32(8),
+                            periodo = reader.GetString(9)
+                        };
+                        list.Add(kardex);
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                return list;
+            }
+        }
+
+        public static void GetMateriasInscrip(ListView listView)
+        {
+            User.carrera = "SISTEMAS";
+            listView.Items.Clear();
+            string grupos = User.carrera.Substring(0, 3).ToUpper();
+
+            using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+            {
+                try
+                {
+                    connection.Open();
+                    
+                    SqlCommand command = new SqlCommand("SELECT id_materia, MATERIA.nombre,creditos, id_grupo, horario, dias_clase, salon, PROFESORES.a_paterno+' '+' '+PROFESORES.a_materno+' '+PROFESORES.nombre AS profesor " +
+                        "FROM GRUPO, MATERIA, PROFESORES WHERE id_materia=materia AND profesor=NUE AND semestre='2019-02' AND id_grupo LIKE '"+grupos+"%%' ORDER BY MATERIA.nombre ASC", connection);
+                    
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {                       
+                        ListViewItem item = new ListViewItem(reader["id_materia"].ToString());
+                        item.SubItems.Add(reader["nombre"].ToString());
+                        item.SubItems.Add(reader["creditos"].ToString());
+                        item.SubItems.Add(reader["id_grupo"].ToString());
+                        item.SubItems.Add(reader["horario"].ToString());
+                        item.SubItems.Add(reader["dias_clase"].ToString());
+                        item.SubItems.Add(reader["salon"].ToString());
+                        item.SubItems.Add(reader["profesor"].ToString());
+                        listView.Items.Add(item);
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }            
+        }          
+
     }
 
     
