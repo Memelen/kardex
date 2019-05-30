@@ -36,6 +36,7 @@ namespace Kardex.View
         private void list_kardex_SelectedIndexChanged(object sender, EventArgs e)
         {
             UIControls.Detail_Kardex(kardices, list_kardex.FocusedItem.Index);
+            new Console_alumnos().WindowState = FormWindowState.Minimized;
         }
     }
 }

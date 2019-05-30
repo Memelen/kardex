@@ -318,6 +318,7 @@
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.lbl_NUA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SU_Alumno";
             this.Text = "SU_Alumno";
             this.ResumeLayout(false);

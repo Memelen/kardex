@@ -18,7 +18,7 @@ namespace Kardex
         public Console_maestro()
         {
             InitializeComponent();
-            UIControls.AbrirFormulario<Profile_profesor>(panel_forms);
+            UIControls.AbrirFormulario<Profile_profesor>(panel_forms);            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

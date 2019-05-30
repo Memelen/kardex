@@ -145,6 +145,7 @@ namespace Kardex.Controller
             details.BringToFront();
             details.WindowState = FormWindowState.Normal;
             details.Show();
+            
         }
 
         public static void Detail_Materia(ListView list_materias)
@@ -202,12 +203,19 @@ namespace Kardex.Controller
 
             foreach (ListViewItem item in list.Items)
             {
-                if (item.SubItems[2].Text != null)
+                if (!string.IsNullOrEmpty(item.SubItems[2].Text))
                 {
-                    prom += Convert.ToInt32(item.SubItems[2].Text);
+                    if (item.SubItems[2].Text != "NC")
+                    {
+                        prom += Convert.ToInt32(item.SubItems[2].Text); 
+                    }
+                }
+                if (list.Items.Count > 0)
+                {
+                    prom = prom / list.Items.Count;
                 }
             }
-            prom = prom / list.Items.Count;
+            
             string intervalo = " AGOSTO - DICIEMBRE ";
             if (period.Substring(6, 1) == "1")
             {
@@ -230,9 +238,9 @@ namespace Kardex.Controller
             details.lbl_grupo.Text = kardices[index].grupo;
             details.cadena = getData.GetProfesor(kardices[index].grupo);
             details.lbl_profesor.Text = details.cadena[0] + " " + details.cadena[1] + " " + details.cadena[2];
-            details.BringToFront();
-            details.WindowState = FormWindowState.Normal;
+            
             details.Show();
+            details.BringToFront();
         }
 
     }

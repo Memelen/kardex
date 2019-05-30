@@ -33,7 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_config = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_inscrip = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,6 +44,7 @@
             this.panel_forms = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +88,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(111)))), ((int)(((byte)(205)))));
-            this.panel2.Controls.Add(this.btn_config);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btn_logout);
             this.panel2.Controls.Add(this.btn_profile);
@@ -98,42 +100,53 @@
             this.panel2.Size = new System.Drawing.Size(196, 425);
             this.panel2.TabIndex = 1;
             // 
-            // btn_config
+            // panel4
             // 
-            this.btn_config.Active = false;
-            this.btn_config.Activecolor = System.Drawing.Color.Gray;
-            this.btn_config.BackColor = System.Drawing.Color.Gray;
-            this.btn_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_config.BorderRadius = 0;
-            this.btn_config.ButtonText = "Inicio";
-            this.btn_config.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_config.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_config.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_config.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_config.Iconimage")));
-            this.btn_config.Iconimage_right = null;
-            this.btn_config.Iconimage_right_Selected = null;
-            this.btn_config.Iconimage_Selected = null;
-            this.btn_config.IconMarginLeft = 0;
-            this.btn_config.IconMarginRight = 0;
-            this.btn_config.IconRightVisible = true;
-            this.btn_config.IconRightZoom = 0D;
-            this.btn_config.IconVisible = true;
-            this.btn_config.IconZoom = 90D;
-            this.btn_config.IsTab = false;
-            this.btn_config.Location = new System.Drawing.Point(0, 124);
-            this.btn_config.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_config.Name = "btn_config";
-            this.btn_config.Normalcolor = System.Drawing.Color.Gray;
-            this.btn_config.OnHovercolor = System.Drawing.Color.Gray;
-            this.btn_config.OnHoverTextColor = System.Drawing.SystemColors.Control;
-            this.btn_config.selected = false;
-            this.btn_config.Size = new System.Drawing.Size(199, 59);
-            this.btn_config.TabIndex = 1;
-            this.btn_config.Text = "Inicio";
-            this.btn_config.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_config.Textcolor = System.Drawing.Color.White;
-            this.btn_config.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_config.Click += new System.EventHandler(this.btn_config_Click);
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Controls.Add(this.btn_inscrip);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 124);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(196, 59);
+            this.panel4.TabIndex = 2;
+            // 
+            // btn_inscrip
+            // 
+            this.btn_inscrip.Active = false;
+            this.btn_inscrip.Activecolor = System.Drawing.Color.Gray;
+            this.btn_inscrip.BackColor = System.Drawing.Color.Gray;
+            this.btn_inscrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_inscrip.BorderRadius = 0;
+            this.btn_inscrip.ButtonText = "Inscripción";
+            this.btn_inscrip.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_inscrip.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_inscrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_inscrip.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_inscrip.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_inscrip.Iconimage")));
+            this.btn_inscrip.Iconimage_right = null;
+            this.btn_inscrip.Iconimage_right_Selected = null;
+            this.btn_inscrip.Iconimage_Selected = null;
+            this.btn_inscrip.IconMarginLeft = 0;
+            this.btn_inscrip.IconMarginRight = 0;
+            this.btn_inscrip.IconRightVisible = true;
+            this.btn_inscrip.IconRightZoom = 0D;
+            this.btn_inscrip.IconVisible = true;
+            this.btn_inscrip.IconZoom = 90D;
+            this.btn_inscrip.IsTab = false;
+            this.btn_inscrip.Location = new System.Drawing.Point(0, 0);
+            this.btn_inscrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_inscrip.Name = "btn_inscrip";
+            this.btn_inscrip.Normalcolor = System.Drawing.Color.Gray;
+            this.btn_inscrip.OnHovercolor = System.Drawing.Color.Gray;
+            this.btn_inscrip.OnHoverTextColor = System.Drawing.SystemColors.Control;
+            this.btn_inscrip.selected = false;
+            this.btn_inscrip.Size = new System.Drawing.Size(196, 59);
+            this.btn_inscrip.TabIndex = 1;
+            this.btn_inscrip.Text = "Inscripción";
+            this.btn_inscrip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inscrip.Textcolor = System.Drawing.Color.White;
+            this.btn_inscrip.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inscrip.Click += new System.EventHandler(this.btn_config_Click);
             // 
             // panel3
             // 
@@ -325,6 +338,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -338,12 +352,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_profile;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_config;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_inscrip;
         private Bunifu.Framework.UI.BunifuFlatButton btn_logout;
         private Bunifu.Framework.UI.BunifuFlatButton btn_horario;
         private Bunifu.Framework.UI.BunifuFlatButton btn_kardex;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel_forms;
+        private System.Windows.Forms.Panel panel4;
     }
 }

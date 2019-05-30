@@ -266,6 +266,7 @@
             this.Controls.Add(this.dropBox_options);
             this.Controls.Add(this.list_detail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuperUser_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuperUser_Panel";

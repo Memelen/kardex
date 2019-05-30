@@ -48,11 +48,13 @@ namespace Kardex.Controller
                     command.Parameters.Add(emailParameter);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Update");
+                    MessageBox.Show("El alumno " + alumno.NUA.ToString()
+                        + " ha sido actualizado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -77,11 +79,12 @@ namespace Kardex.Controller
                     command.Parameters.Add(credParameter);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Update");
+                    MessageBox.Show("La materia " + materia.id_materia.ToString() + " ha sido actualizado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -116,11 +119,12 @@ namespace Kardex.Controller
                     commandProf.Parameters.Add(emailParameter);
                     commandProf.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Update");
+                    MessageBox.Show("El profesor " + profesor.NUE.ToString() + " ha sido actualizado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -150,11 +154,12 @@ namespace Kardex.Controller
                     commandProf.ExecuteNonQuery();
 
                     connection.Close();
-                    MessageBox.Show("Insertado");
+                    MessageBox.Show("El grupo " + grupo.id_grupo + " ha sido actualizado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

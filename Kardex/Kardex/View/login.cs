@@ -16,26 +16,32 @@ namespace Kardex
     {
         public login()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
+                
                 Log log = new Log();
 
                 bool student = log.LoginStudent(txt_user.Text, txt_pass.Text);
                 bool teacher = log.LoginTeacher(txt_user.Text, txt_pass.Text);
-
+                
                 if (teacher)
                 {
+
                     Console_maestro maestro = new Console_maestro();
                     maestro.Show();
                     this.Hide();
                 }
                 else if (student)
                 {
+
                     new Console_alumnos().Show();
                     this.Hide();
                 }
@@ -43,11 +49,14 @@ namespace Kardex
                 {
                     MessageBox.Show("ERROR: Nombre o contraseña incorrectos");
                 }
+                
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                lbl_error.Visible = true;
+                txt_pass.Text = "";
+                txt_pass.Focus();
             }
             
         }

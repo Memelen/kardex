@@ -156,6 +156,7 @@
             this.btn_add.ButtonText = "Agregar";
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_add.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_add.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_add.Iconimage")));
             this.btn_add.Iconimage_right = null;
@@ -168,14 +169,14 @@
             this.btn_add.IconVisible = true;
             this.btn_add.IconZoom = 90D;
             this.btn_add.IsTab = false;
-            this.btn_add.Location = new System.Drawing.Point(1280, 308);
+            this.btn_add.Location = new System.Drawing.Point(1343, 308);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_add.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_add.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_add.selected = false;
-            this.btn_add.Size = new System.Drawing.Size(209, 59);
+            this.btn_add.Size = new System.Drawing.Size(146, 59);
             this.btn_add.TabIndex = 3;
             this.btn_add.Text = "Agregar";
             this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,7 +188,7 @@
             // 
             this.btn_quitar.Active = false;
             this.btn_quitar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_quitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_quitar.BackColor = System.Drawing.Color.LightCoral;
             this.btn_quitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_quitar.BorderRadius = 0;
             this.btn_quitar.ButtonText = "Quitar";
@@ -205,26 +206,26 @@
             this.btn_quitar.IconVisible = true;
             this.btn_quitar.IconZoom = 90D;
             this.btn_quitar.IsTab = false;
-            this.btn_quitar.Location = new System.Drawing.Point(1094, 34);
+            this.btn_quitar.Location = new System.Drawing.Point(199, 13);
             this.btn_quitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_quitar.Name = "btn_quitar";
-            this.btn_quitar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_quitar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_quitar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_quitar.Normalcolor = System.Drawing.Color.LightCoral;
+            this.btn_quitar.OnHovercolor = System.Drawing.Color.LightCoral;
+            this.btn_quitar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btn_quitar.selected = false;
-            this.btn_quitar.Size = new System.Drawing.Size(209, 59);
+            this.btn_quitar.Size = new System.Drawing.Size(136, 59);
             this.btn_quitar.TabIndex = 4;
             this.btn_quitar.Text = "Quitar";
             this.btn_quitar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_quitar.Textcolor = System.Drawing.Color.White;
+            this.btn_quitar.Textcolor = System.Drawing.Color.Black;
             this.btn_quitar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quitar.Click += new System.EventHandler(this.btn_quitar_Click);
             // 
             // btn_inscrip
             // 
             this.btn_inscrip.Active = false;
-            this.btn_inscrip.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_inscrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_inscrip.Activecolor = System.Drawing.Color.LightSkyBlue;
+            this.btn_inscrip.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_inscrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_inscrip.BorderRadius = 0;
             this.btn_inscrip.ButtonText = "Inscribirse";
@@ -242,18 +243,18 @@
             this.btn_inscrip.IconVisible = true;
             this.btn_inscrip.IconZoom = 90D;
             this.btn_inscrip.IsTab = false;
-            this.btn_inscrip.Location = new System.Drawing.Point(13, 34);
+            this.btn_inscrip.Location = new System.Drawing.Point(13, 13);
             this.btn_inscrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_inscrip.Name = "btn_inscrip";
-            this.btn_inscrip.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_inscrip.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_inscrip.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_inscrip.Normalcolor = System.Drawing.Color.LightSkyBlue;
+            this.btn_inscrip.OnHovercolor = System.Drawing.Color.LightSkyBlue;
+            this.btn_inscrip.OnHoverTextColor = System.Drawing.Color.DimGray;
             this.btn_inscrip.selected = false;
-            this.btn_inscrip.Size = new System.Drawing.Size(209, 59);
+            this.btn_inscrip.Size = new System.Drawing.Size(168, 59);
             this.btn_inscrip.TabIndex = 5;
             this.btn_inscrip.Text = "Inscribirse";
             this.btn_inscrip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inscrip.Textcolor = System.Drawing.Color.White;
+            this.btn_inscrip.Textcolor = System.Drawing.Color.DimGray;
             this.btn_inscrip.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscrip.Click += new System.EventHandler(this.btn_inscrip_Click);
             // 
@@ -261,6 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1502, 750);
             this.Controls.Add(this.btn_inscrip);
             this.Controls.Add(this.btn_quitar);

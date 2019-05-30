@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nombre_materia = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_op = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -41,6 +42,7 @@
             this.lbl_grupo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lbl_profesor = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.SuspendLayout();
             // 
             // nombre_materia
@@ -171,6 +173,13 @@
             this.bunifuCustomLabel6.Text = "x";
             this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click);
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // Details_Kardex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,5 +222,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel lbl_grupo;
         public Bunifu.Framework.UI.BunifuCustomLabel lbl_profesor;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

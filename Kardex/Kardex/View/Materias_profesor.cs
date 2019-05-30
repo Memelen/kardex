@@ -32,6 +32,7 @@ namespace Kardex.View
         private void list_materias_SelectedIndexChanged(object sender, EventArgs e)
         {
             UIControls.Detail_Materia(list_materias);
+            new Console_maestro().WindowState = FormWindowState.Minimized;
         }
 
     }

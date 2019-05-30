@@ -41,7 +41,8 @@ namespace Kardex.View
 
         private void list_tutorados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UIControls.Detail_Tutorado(list, list_tutorados);                        
+            UIControls.Detail_Tutorado(list, list_tutorados);
+            new Console_maestro().WindowState = FormWindowState.Minimized;
         }
     }
 }

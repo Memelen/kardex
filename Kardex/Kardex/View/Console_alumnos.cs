@@ -16,8 +16,23 @@ namespace Kardex.View
         public Console_alumnos()
         {
             InitializeComponent();
+            BtnStatus();
+            UIControls.AbrirFormulario<Profile_alumno>(panel_forms);
         }
-
+        private void BtnStatus()
+        {
+            DateTime today = DateTime.Today;
+            DateTime fecha_inscrip = DateTime.Parse("30/05/2019");
+            
+            if (fecha_inscrip == today)
+            {
+                btn_inscrip.Visible = true;
+            }
+            else
+            {
+                btn_inscrip.Visible = false;
+            }
+        }
         private void label2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -46,7 +61,7 @@ namespace Kardex.View
 
         private void btn_config_Click(object sender, EventArgs e)
         {
-            UIControls.AbrirFormulario<Home_alumno>(panel_forms);
+            new Inscripcion().Show();
         }
     }
 }

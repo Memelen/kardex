@@ -47,9 +47,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\..\..\Pictures\Icons\UI\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Pictures\Icons\UI\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -81,6 +87,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
@@ -134,12 +141,6 @@
     <Compile Include="View\Detail_materia.Designer.cs">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Home_alumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Home_alumno.Designer.cs">
-      <DependentUpon>Home_alumno.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Horario_alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +158,12 @@
     </Compile>
     <Compile Include="View\Kardex.Designer.cs">
       <DependentUpon>Kardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LoginSU.cs">
       <SubType>Form</SubType>
@@ -257,9 +264,6 @@
     <EmbeddedResource Include="View\Detail_materia.resx">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Home_alumno.resx">
-      <DependentUpon>Home_alumno.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Horario_alumno.resx">
       <DependentUpon>Horario_alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Kardex.resx">
       <DependentUpon>Kardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginSU.resx">
       <DependentUpon>LoginSU.cs</DependentUpon>
@@ -348,6 +355,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.btn_login = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_user = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -36,6 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.lbl_error = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // btn_login
@@ -56,12 +59,15 @@
             this.btn_login.IdleFillColor = System.Drawing.Color.LightSkyBlue;
             this.btn_login.IdleForecolor = System.Drawing.Color.White;
             this.btn_login.IdleLineColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_login.Location = new System.Drawing.Point(618, 326);
+            this.btn_login.Location = new System.Drawing.Point(642, 349);
             this.btn_login.Margin = new System.Windows.Forms.Padding(5);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(167, 54);
             this.btn_login.TabIndex = 3;
             this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuToolTip1.SetToolTip(this.btn_login, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_login, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_login, "");
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // txt_user
@@ -86,6 +92,9 @@
             this.txt_user.Size = new System.Drawing.Size(323, 32);
             this.txt_user.TabIndex = 4;
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuToolTip1.SetToolTip(this.txt_user, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_user, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_user, "");
             // 
             // txt_pass
             // 
@@ -109,6 +118,9 @@
             this.txt_pass.Size = new System.Drawing.Size(323, 32);
             this.txt_pass.TabIndex = 5;
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuToolTip1.SetToolTip(this.txt_pass, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.txt_pass, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txt_pass, "");
             // 
             // bunifuCustomLabel1
             // 
@@ -119,6 +131,9 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(251, 54);
             this.bunifuCustomLabel1.TabIndex = 6;
             this.bunifuCustomLabel1.Text = "Iniciar sesión";
+            this.bunifuToolTip1.SetToolTip(this.bunifuCustomLabel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuCustomLabel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuCustomLabel1, "");
             // 
             // panel1
             // 
@@ -128,6 +143,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 427);
             this.panel1.TabIndex = 8;
+            this.bunifuToolTip1.SetToolTip(this.panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
             // 
             // btn_close
             // 
@@ -153,6 +171,9 @@
             this.btn_close.Size = new System.Drawing.Size(24, 29);
             this.btn_close.TabIndex = 9;
             this.btn_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuToolTip1.SetToolTip(this.btn_close, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btn_close, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btn_close, "");
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // bunifuCustomLabel2
@@ -164,7 +185,61 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(345, 28);
             this.bunifuCustomLabel2.TabIndex = 10;
             this.bunifuCustomLabel2.Text = "Accede mediante tu cuenta institucional";
+            this.bunifuToolTip1.SetToolTip(this.bunifuCustomLabel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuCustomLabel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuCustomLabel2, "");
             this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = true;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = "txt_user";
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
+            // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.lbl_error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_error.Location = new System.Drawing.Point(477, 302);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(332, 42);
+            this.lbl_error.TabIndex = 11;
+            this.lbl_error.Text = "Contraseña o identificador de usuario incorrectos. \r\nEscriba la contraseña y el i" +
+    "dentificador de usuario correctos \r\ne inténtelo de nuevo.";
+            this.bunifuToolTip1.SetToolTip(this.lbl_error, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbl_error, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbl_error, "");
+            this.lbl_error.Visible = false;
             // 
             // login
             // 
@@ -172,6 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(844, 427);
+            this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel1);
@@ -180,6 +256,7 @@
             this.Controls.Add(this.txt_user);
             this.Controls.Add(this.btn_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control escolar";
@@ -196,5 +273,7 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_close;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_error;
     }
 }

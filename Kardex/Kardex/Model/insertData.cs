@@ -136,6 +136,8 @@ namespace Kardex.Controller
                     commandProf.ExecuteNonQuery();
 
                     connection.Close();
+                    MessageBox.Show("Insertado");
+
                 }
                 catch (Exception ex)
                 {
@@ -164,6 +166,7 @@ namespace Kardex.Controller
                     command.Parameters.Add(credParameter);
                     command.ExecuteNonQuery();
                     connection.Close();
+                    MessageBox.Show("Insertado");
                 }
                 catch (Exception ex)
                 {
@@ -209,6 +212,7 @@ namespace Kardex.Controller
                     command.Parameters.Add(passParameter);
                     command.ExecuteNonQuery();
                     connection.Close();
+                    MessageBox.Show("Insertado");
                 }
                 catch (Exception ex)
                 {
@@ -264,7 +268,8 @@ namespace Kardex.Controller
 
             if (credit > 32 || credit < 25)
             {
-                MessageBox.Show("Creditos excedidos");
+                
+                MessageBox.Show("Sobrepasa el límite de créditos");
                 return;
             }
 
@@ -282,7 +287,7 @@ namespace Kardex.Controller
                         if (materia.estatus == "Aprobado")
                         {
                             listView.Items[item.Index].Remove();
-                            MessageBox.Show("ERROR: Materia ya cursada");
+                            MessageBox.Show("Materia ya cursada", "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -314,10 +319,11 @@ namespace Kardex.Controller
                         connection.Close();
                         AddDetalle_Grupo(item.SubItems[4].Text);
                         MessageBox.Show("Insertado");
+                        User.semestre = User.semestre + 1;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -344,7 +350,7 @@ namespace Kardex.Controller
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message + "here");
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

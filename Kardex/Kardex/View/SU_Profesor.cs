@@ -29,35 +29,41 @@ namespace Kardex.View
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_amaterno.Text))
-            {
-                txt_amaterno.Text = "";
-            }
 
-            if (string.IsNullOrEmpty(txt_ext.Text))
+            if (string.IsNullOrEmpty(txt_nombre.Text) || string.IsNullOrEmpty(txt_apaterno.Text)
+                || string.IsNullOrEmpty(txt_amaterno.Text) || string.IsNullOrEmpty(txt_dir.Text)
+                || string.IsNullOrEmpty(txt_tel.Text))
             {
-                txt_ext.Text = "0";
-            }
+                if (string.IsNullOrEmpty(txt_amaterno.Text))
+                {
+                    txt_amaterno.Text = "";
+                }
 
-            if (string.IsNullOrEmpty(txt_cub.Text))
-            {
-                txt_cub.Text = "0";
-            }
+                if (string.IsNullOrEmpty(txt_ext.Text))
+                {
+                    txt_ext.Text = "0";
+                }
 
-            Profesor profesor = new Profesor
-            {
-                NUE = this.NUE,
-                nombre = txt_nombre.Text,
-                a_pateno = txt_apaterno.Text,
-                a_materno = txt_amaterno.Text,
-                direccion = txt_dir.Text,
-                tel = txt_tel.Text,
-                ext = Convert.ToInt32(txt_ext.Text),
-                cub = Convert.ToInt32(txt_cub.Text),
-                correo = txt_correo.Text,
-                passw = Datagenerators.GeneratePassword(5)            
-            };
-            insertData.AddProfesor(profesor);
+                if (string.IsNullOrEmpty(txt_cub.Text))
+                {
+                    txt_cub.Text = "0";
+                }
+
+                Profesor profesor = new Profesor
+                {
+                    NUE = this.NUE,
+                    nombre = txt_nombre.Text,
+                    a_pateno = txt_apaterno.Text,
+                    a_materno = txt_amaterno.Text,
+                    direccion = txt_dir.Text,
+                    tel = txt_tel.Text,
+                    ext = Convert.ToInt32(txt_ext.Text),
+                    cub = Convert.ToInt32(txt_cub.Text),
+                    correo = txt_correo.Text,
+                    passw = Datagenerators.GeneratePassword(5)
+                };
+                insertData.AddProfesor(profesor); 
+            }
         }
 
         private void btn_update_Click(object sender, EventArgs e)

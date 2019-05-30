@@ -347,6 +347,7 @@
             this.Controls.Add(this.txt_apaterno);
             this.Controls.Add(this.txt_nombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SU_Profesor";
             this.Text = "SU_Profesor";
             this.ResumeLayout(false);

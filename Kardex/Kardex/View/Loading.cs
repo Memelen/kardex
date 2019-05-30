@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Kardex.View
 {
-    public partial class Home_alumno : Form
+    public partial class Loading : Form
     {
-        public Home_alumno()
+        public Loading()
         {
             InitializeComponent();
-        }
-
-        private void btn_inscrip_Click(object sender, EventArgs e)
-        {
-            new Inscripcion().Show();
         }
     }
 }

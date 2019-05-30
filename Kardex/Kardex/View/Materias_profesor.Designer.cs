@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Materias_profesor));
             this.cB_semestre = new System.Windows.Forms.ComboBox();
             this.list_materias = new System.Windows.Forms.ListView();
             this.nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,6 +103,7 @@
             this.Controls.Add(this.list_materias);
             this.Controls.Add(this.cB_semestre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Materias_profesor";
             this.Text = "Details_materia";
             this.Load += new System.EventHandler(this.Details_materia_Load);

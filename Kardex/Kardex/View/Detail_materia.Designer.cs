@@ -41,6 +41,7 @@
             this.txt_values = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbl_panelinfo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbl_error = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // lbl_materia
@@ -222,12 +223,26 @@
             this.bunifuCustomLabel3.Text = "X";
             this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.lbl_error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_error.Location = new System.Drawing.Point(447, 77);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(263, 42);
+            this.lbl_error.TabIndex = 12;
+            this.lbl_error.Text = "*Inserte un valor entre 0 a 10.\r\nO NC si el alumno no asistió a todo el semestre\r" +
+    "\n\r\n";
+            this.lbl_error.Visible = false;
+            // 
             // Detail_materia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1052, 420);
+            this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.lbl_panelinfo);
             this.Controls.Add(this.txt_values);
@@ -260,5 +275,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_values;
         public Bunifu.Framework.UI.BunifuCustomLabel lbl_panelinfo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_error;
     }
 }

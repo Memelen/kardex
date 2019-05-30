@@ -221,6 +221,7 @@
             this.Controls.Add(this.btn_correo);
             this.Controls.Add(this.lbl_nombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Profile_profesor";
             this.Text = "Profile_profesor";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

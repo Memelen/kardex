@@ -255,6 +255,7 @@
             this.Controls.Add(this.txt_hi);
             this.Controls.Add(this.txt_grupo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SU_Grupo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SU_Grupo";

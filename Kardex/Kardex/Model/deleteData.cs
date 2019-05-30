@@ -27,11 +27,12 @@ namespace Kardex.Controller
 
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Delete");
+                    MessageBox.Show("El alumno " + alumno.ToString() + " ha sido borrado", "Operación exitosa",MessageBoxButtons.OK, 
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -49,11 +50,12 @@ namespace Kardex.Controller
                     command.Parameters.Add(idParameter);
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Delete");
+                    MessageBox.Show("La materia " + materia.ToString() + " ha sido borrado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -70,11 +72,12 @@ namespace Kardex.Controller
                     commandProf.Parameters.Add(NUEParameter);
                     commandProf.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Delete");
+                    MessageBox.Show("El profesor " + profesor.ToString() + " ha sido borrado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -95,11 +98,12 @@ namespace Kardex.Controller
 
                     command.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Delete");
+                    MessageBox.Show("El grupo " + grupo + " ha sido borrado", "Operación exitosa", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Critical ERROR:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
