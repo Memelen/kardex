@@ -48,8 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Pictures\Icons\UI\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -60,8 +60,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.8.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.8.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -97,11 +97,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\deleteData.cs" />
-    <Compile Include="Controller\getData.cs" />
-    <Compile Include="Controller\insertData.cs" />
+    <Compile Include="Controller\Datagenerators.cs" />
+    <Compile Include="Model\deleteData.cs" />
+    <Compile Include="Model\getData.cs" />
+    <Compile Include="Model\insertData.cs" />
     <Compile Include="Controller\UIControls.cs" />
-    <Compile Include="Controller\updateData.cs" />
+    <Compile Include="Model\updateData.cs" />
     <Compile Include="Model\Alumno.cs" />
     <Compile Include="Model\Departamento.cs" />
     <Compile Include="Model\Grupo.cs" />
@@ -121,17 +122,47 @@
     <Compile Include="View\Console_maestro.Designer.cs">
       <DependentUpon>Console_maestro.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Details_Kardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Details_Kardex.Designer.cs">
+      <DependentUpon>Details_Kardex.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Detail_materia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Detail_materia.Designer.cs">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Home_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home_alumno.Designer.cs">
+      <DependentUpon>Home_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Horario_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Horario_alumno.Designer.cs">
+      <DependentUpon>Horario_alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Inscripcion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Inscripcion.Designer.cs">
       <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Kardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Kardex.Designer.cs">
+      <DependentUpon>Kardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginSU.Designer.cs">
+      <DependentUpon>LoginSU.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Materias_profesor.cs">
       <SubType>Form</SubType>
@@ -220,11 +251,26 @@
     <EmbeddedResource Include="View\Console_maestro.resx">
       <DependentUpon>Console_maestro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Details_Kardex.resx">
+      <DependentUpon>Details_Kardex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Detail_materia.resx">
       <DependentUpon>Detail_materia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Home_alumno.resx">
+      <DependentUpon>Home_alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Horario_alumno.resx">
+      <DependentUpon>Horario_alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Inscripcion.resx">
       <DependentUpon>Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Kardex.resx">
+      <DependentUpon>Kardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginSU.resx">
+      <DependentUpon>LoginSU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Materias_profesor.resx">
       <DependentUpon>Materias_profesor.cs</DependentUpon>

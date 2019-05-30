@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Console_alumnos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_config = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,8 +40,6 @@
             this.btn_profile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_horario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_kardex = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel_forms = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,8 +55,33 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 35);
+            this.panel1.Size = new System.Drawing.Size(892, 35);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(872, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "-";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Panel de Alumnos";
             // 
             // panel2
             // 
@@ -70,7 +95,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 465);
+            this.panel2.Size = new System.Drawing.Size(196, 425);
             this.panel2.TabIndex = 1;
             // 
             // btn_config
@@ -80,7 +105,7 @@
             this.btn_config.BackColor = System.Drawing.Color.Gray;
             this.btn_config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_config.BorderRadius = 0;
-            this.btn_config.ButtonText = "Configuración";
+            this.btn_config.ButtonText = "Inicio";
             this.btn_config.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_config.DisabledColor = System.Drawing.Color.Gray;
             this.btn_config.Iconcolor = System.Drawing.Color.Transparent;
@@ -104,10 +129,11 @@
             this.btn_config.selected = false;
             this.btn_config.Size = new System.Drawing.Size(199, 59);
             this.btn_config.TabIndex = 1;
-            this.btn_config.Text = "Configuración";
+            this.btn_config.Text = "Inicio";
             this.btn_config.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_config.Textcolor = System.Drawing.Color.White;
             this.btn_config.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_config.Click += new System.EventHandler(this.btn_config_Click);
             // 
             // panel3
             // 
@@ -163,6 +189,7 @@
             this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_logout.Textcolor = System.Drawing.Color.White;
             this.btn_logout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // btn_profile
             // 
@@ -236,6 +263,7 @@
             this.btn_horario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_horario.Textcolor = System.Drawing.Color.White;
             this.btn_horario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_horario.Click += new System.EventHandler(this.btn_horario_Click);
             // 
             // btn_kardex
             // 
@@ -272,45 +300,21 @@
             this.btn_kardex.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kardex.Textcolor = System.Drawing.Color.White;
             this.btn_kardex.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Panel de Alumnos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(905, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "-";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.btn_kardex.Click += new System.EventHandler(this.btn_kardex_Click);
             // 
             // panel_forms
             // 
             this.panel_forms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_forms.Location = new System.Drawing.Point(196, 35);
             this.panel_forms.Name = "panel_forms";
-            this.panel_forms.Size = new System.Drawing.Size(729, 465);
+            this.panel_forms.Size = new System.Drawing.Size(696, 425);
             this.panel_forms.TabIndex = 2;
             // 
             // Console_alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 500);
+            this.ClientSize = new System.Drawing.Size(892, 460);
             this.Controls.Add(this.panel_forms);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

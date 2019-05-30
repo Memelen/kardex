@@ -134,5 +134,106 @@ namespace Kardex.Controller
             sU_.Show();
         }
 
+        public static void Detail_Tutorado(List<Alumno> list, ListView list_tutorados)
+        {
+            Details_tutorado details = new Details_tutorado();
+            details.lbl_nombre.Text = list[list_tutorados.FocusedItem.Index].nombre;
+            details.lbl_carrera.Text = list[list_tutorados.FocusedItem.Index].carrera;
+            details.lbl_semestre.Text = list[list_tutorados.FocusedItem.Index].semestre.ToString() + " Semestre";
+            details.lbl_correo.Text = list[list_tutorados.FocusedItem.Index].correo;
+            details.lbl_NUA.Text = list[list_tutorados.FocusedItem.Index].NUA.ToString();
+            details.BringToFront();
+            details.WindowState = FormWindowState.Normal;
+            details.Show();
+        }
+
+        public static void Detail_Materia(ListView list_materias)
+        {
+            string grupo = list_materias.Items[list_materias.FocusedItem.Index].SubItems[1].Text;
+            Detail_materia details = new Detail_materia(grupo);
+            details.lbl_materia.Text = list_materias.Items[list_materias.FocusedItem.Index].SubItems[0].Text;
+            details.lbl_grupo.Text = grupo;
+            details.Show();
+            details.BringToFront();
+        }
+
+        public static void putKardex(List<kardex> kardices,ListView listView, string periodo)
+        {
+            listView.Items.Clear();
+            
+            
+            foreach (kardex kardex in kardices)
+            {              
+                if (kardex.periodo == periodo)
+                {
+                    ListViewItem item = new ListViewItem(kardex.materia.ToString());
+                    item.SubItems.Add(kardex.nombre_materia);
+                    item.SubItems.Add(kardex.cal);
+                    listView.Items.Add(item);
+                }
+            }
+        }
+
+        public static void putPeriodos(ComboBox comboBox)
+        {
+            int year = Convert.ToInt32(Datagenerators.GetActualSemester().Substring(0, 4));
+            int period = Convert.ToInt32(Datagenerators.GetActualSemester().Substring(6, 1));
+
+            comboBox.Items.Add(Datagenerators.GetActualSemester());
+            for (int i = 1; i < User.semestre; i++)
+            {
+                if (period == 1)
+                {
+                    year--;
+                    period = 2;
+                }
+                else
+                {
+                    period = 1;
+                }
+                comboBox.Items.Add(year.ToString()+"-0"+period.ToString());
+            }
+            comboBox.SelectedIndex = 0;           
+        }
+
+        public static void LabelKardex(Label label, string period, ListView list, int i)
+        {
+            double prom = 0;
+
+            foreach (ListViewItem item in list.Items)
+            {
+                if (item.SubItems[2].Text != null)
+                {
+                    prom += Convert.ToInt32(item.SubItems[2].Text);
+                }
+            }
+            prom = prom / list.Items.Count;
+            string intervalo = " AGOSTO - DICIEMBRE ";
+            if (period.Substring(6, 1) == "1")
+            {
+                intervalo = " ENERO - JUNIO ";
+            }
+            int semestre = User.semestre - i;
+            label.Text = "NIVEL: " + semestre.ToString();
+            label.Text += intervalo + period.Substring(0, 4);
+            label.Text += " - PROMEDIO " + prom.ToString();
+        }
+
+        public static void Detail_Kardex(List<kardex> kardices, int index)
+        {
+            Details_Kardex details = new Details_Kardex();
+            details.nombre_materia.Text = kardices[index].nombre_materia;
+            details.lbl_op.Text = kardices[index].op.ToString();
+            details.lbl_status.Text = kardices[index].estatus;
+            details.lbl_cal.Text = kardices[index].cal;
+            details.lbl_asis.Text = kardices[index].asistencia.ToString();
+            details.lbl_grupo.Text = kardices[index].grupo;
+            details.cadena = getData.GetProfesor(kardices[index].grupo);
+            details.lbl_profesor.Text = details.cadena[0] + " " + details.cadena[1] + " " + details.cadena[2];
+            details.BringToFront();
+            details.WindowState = FormWindowState.Normal;
+            details.Show();
+        }
+
     }
 }

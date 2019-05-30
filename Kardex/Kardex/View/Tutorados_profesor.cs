@@ -41,16 +41,7 @@ namespace Kardex.View
 
         private void list_tutorados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Details_tutorado details = new Details_tutorado();
-            details.lbl_nombre.Text = list[list_tutorados.FocusedItem.Index].nombre;
-            details.lbl_carrera.Text = list[list_tutorados.FocusedItem.Index].carrera;
-            details.lbl_semestre.Text = list[list_tutorados.FocusedItem.Index].semestre.ToString() + " Semestre";
-            details.lbl_correo.Text = list[list_tutorados.FocusedItem.Index].correo;
-            details.lbl_NUA.Text = list[list_tutorados.FocusedItem.Index].NUA.ToString();
-            details.BringToFront();
-            details.WindowState = FormWindowState.Normal;
-            details.Show();
-            
+            UIControls.Detail_Tutorado(list, list_tutorados);                        
         }
     }
 }

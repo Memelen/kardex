@@ -27,5 +27,26 @@ namespace Kardex.View
         {
             UIControls.AbrirFormulario<Profile_alumno>(panel_forms);
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+            Environment.Exit(0);
+        }
+
+        private void btn_horario_Click(object sender, EventArgs e)
+        {
+            UIControls.AbrirFormulario<Horario_alumno>(panel_forms);
+        }
+
+        private void btn_kardex_Click(object sender, EventArgs e)
+        {
+            UIControls.AbrirFormulario<Kardex>(panel_forms);
+        }
+
+        private void btn_config_Click(object sender, EventArgs e)
+        {
+            UIControls.AbrirFormulario<Home_alumno>(panel_forms);
+        }
     }
 }

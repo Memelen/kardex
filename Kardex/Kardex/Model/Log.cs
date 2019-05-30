@@ -19,7 +19,7 @@ namespace Kardex.Model
             SqlParameter userParameter = new SqlParameter("@user", user);
             SqlParameter passParameter = new SqlParameter("@password", password);
 
-            SqlCommand command = new SqlCommand("SELECT NUA, A.nombre, A.a_paterno, A.a_materno, A.direccion, A.tel, semestre, division, carrera, A.correo, tutor, P.nombre, P.a_paterno, P.a_materno FROM ALUMNOS A, PROFESORES P WHERE (A.correo= @user OR A.NUA=@nua) AND A.passw=@password;", connection);
+            SqlCommand command = new SqlCommand("SELECT NUA, A.nombre, A.a_paterno, A.a_materno, A.direccion, A.tel, semestre, division, carrera, A.correo, tutor, P.nombre, P.a_paterno, P.a_materno FROM ALUMNOS A, PROFESORES P WHERE (A.correo=@user OR A.NUA=@nua) AND A.passw=@password;", connection);
             command.Parameters.Add(nuaParameter);
             command.Parameters.Add(userParameter);
             command.Parameters.Add(passParameter);

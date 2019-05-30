@@ -21,7 +21,7 @@ namespace Kardex.View
             btn_update.Visible = false;
         }
 
-        private int Materia = getData.GenerateNU();
+        private int Materia = Datagenerators.GenerateNU();
 
         private void btn_register_Click(object sender, EventArgs e)
         {

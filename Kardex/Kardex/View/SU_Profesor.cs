@@ -20,7 +20,7 @@ namespace Kardex.View
             btn_update.Visible = false;
         }
 
-        private int NUE = getData.GenerateNU();
+        private int NUE = Datagenerators.GenerateNU();
         
         private void bunifuCustomLabel3_Click(object sender, EventArgs e)
         {
@@ -55,7 +55,7 @@ namespace Kardex.View
                 ext = Convert.ToInt32(txt_ext.Text),
                 cub = Convert.ToInt32(txt_cub.Text),
                 correo = txt_correo.Text,
-                passw = getData.GeneratePassword(5)            
+                passw = Datagenerators.GeneratePassword(5)            
             };
             insertData.AddProfesor(profesor);
         }
@@ -88,7 +88,7 @@ namespace Kardex.View
                 ext = Convert.ToInt32(txt_ext.Text),
                 cub = Convert.ToInt32(txt_cub.Text),
                 correo = txt_correo.Text,
-                passw = getData.GeneratePassword(5)
+                passw = Datagenerators.GeneratePassword(5)
             };
             updateData.UpdateProfesor(profesor);
         }

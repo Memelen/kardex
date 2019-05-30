@@ -36,7 +36,8 @@ namespace Kardex
                 }
                 else if (student)
                 {
-                    MessageBox.Show("Es alumno " + User.NUA);
+                    new Console_alumnos().Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -58,8 +59,9 @@ namespace Kardex
 
         private void bunifuCustomLabel2_Click(object sender, EventArgs e)
         {
-            new SuperUser_Panel().Show();
+            new LoginSU().Show();
             this.Hide();
+
         }
     }
 }

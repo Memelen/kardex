@@ -285,37 +285,6 @@ namespace Kardex.Controller
             return list;
         }
 
-        public static int GenerateNU()
-        {
-            Random random = new Random();
-            int NU = random.Next(1,99999);
-            return NU;
-        }
-
-        public static string GeneratePassword(int longitud)
-        {
-            string contraseña = string.Empty;
-            string[] letras = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-                                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-            Random EleccionAleatoria = new Random();
-
-            for (int i = 0; i < longitud; i++)
-            {
-                int LetraAleatoria = EleccionAleatoria.Next(0, 100);
-                int NumeroAleatorio = EleccionAleatoria.Next(0, 9);
-
-                if (LetraAleatoria < letras.Length)
-                {
-                    contraseña += letras[LetraAleatoria];
-                }
-                else
-                {
-                    contraseña += NumeroAleatorio.ToString();
-                }
-            }
-            return contraseña;
-        }
-
         public static void GetDivisiones(ComboBox div, ComboBox box)
         {
             div.Items.Clear();
@@ -430,7 +399,6 @@ namespace Kardex.Controller
 
         public static void GetMateriasInscrip(ListView listView)
         {
-            User.carrera = "SISTEMAS";
             listView.Items.Clear();
             string grupos = User.carrera.Substring(0, 3).ToUpper();
 
@@ -464,7 +432,69 @@ namespace Kardex.Controller
                     MessageBox.Show(ex.Message);
                 }
             }            
-        }          
+        }
+
+        public static void GetInfoClasesA(string days, ListView listView)
+        {
+            listView.Items.Clear();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+                {
+                    connection.Open();
+                    SqlParameter alumnoParameter = new SqlParameter("@alumno", User.NUA);
+                    SqlCommand command = new SqlCommand("SELECT materia, M.nombre, salon, horario, id_grupo FROM GRUPO, MATERIA M, DETALLE_GRUPO " +
+                        "WHERE (dias_clase LIKE '%%"+days+"%%' AND materia=id_materia AND NUA=@alumno AND semestre='2019-01' AND id_grupo=grupo)", connection);
+                    command.Parameters.Add(alumnoParameter);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader["materia"].ToString());
+                        item.SubItems.Add(reader.GetString(1));
+                        item.SubItems.Add(reader.GetString(2));
+                        item.SubItems.Add(reader.GetString(3));
+                        item.SubItems.Add(reader.GetString(4));
+                        listView.Items.Add(item);
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static string[] GetProfesor(string grupo)
+        {
+            string[] cadena = new string[4];
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(Kardex.Properties.Settings.Default.ConnectionDB))
+                {
+                    connection.Open();
+                    SqlParameter Parameter = new SqlParameter("@grupo", grupo);
+                    SqlCommand command = new SqlCommand("SELECT nombre,a_paterno,a_materno,correo FROM PROFESORES, GRUPO WHERE id_grupo=@grupo AND NUE=profesor", connection);
+                    command.Parameters.Add(Parameter);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        cadena[0] = reader.GetString(0);
+                        cadena[1] = reader.GetString(1);
+                        cadena[2] = reader.GetString(2);
+                        cadena[3] = reader.GetString(3);
+                    }
+                    reader.Close();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return cadena;
+        }
 
     }
 

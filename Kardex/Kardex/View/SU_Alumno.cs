@@ -26,7 +26,7 @@ namespace Kardex.View
             lbl_NUA.Text = NUA.ToString();
         }
 
-        private int NUA = getData.GenerateNU();
+        private int NUA = Datagenerators.GenerateNU();
 
         private void bunifuCustomLabel3_Click(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace Kardex.View
                 carrera = CB_carrera.SelectedItem.ToString(),
                 tutor = Convert.ToInt32(cB_tutor.SelectedItem.ToString()),
                 correo = txt_correo.Text,
-                passw = getData.GeneratePassword(5)
+                passw = Datagenerators.GeneratePassword(5)
             };
             
             insertData.AddAlumno(alumno);          

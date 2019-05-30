@@ -256,6 +256,17 @@ namespace Kardex.Controller
         {
             List<kardex> kardex = new List<kardex>(getData.GetKadex());
             int op = 1;
+            int credit = 0;
+            foreach (ListViewItem item in listView.Items)
+            {
+                credit += Convert.ToInt32(item.SubItems[2].Text);
+            }
+
+            if (credit > 32 || credit < 25)
+            {
+                MessageBox.Show("Creditos excedidos");
+                return;
+            }
 
             foreach (ListViewItem item in listView.Items)
             {

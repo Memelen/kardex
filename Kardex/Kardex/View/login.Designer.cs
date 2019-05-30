@@ -33,9 +33,9 @@
             this.txt_user = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_pass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // btn_login
@@ -120,17 +120,6 @@
             this.bunifuCustomLabel1.TabIndex = 6;
             this.bunifuCustomLabel1.Text = "Iniciar sesión";
             // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(464, 99);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(345, 28);
-            this.bunifuCustomLabel2.TabIndex = 7;
-            this.bunifuCustomLabel2.Text = "Accede mediante tu cuenta institucional";
-            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
@@ -166,15 +155,26 @@
             this.btn_close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(464, 101);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(345, 28);
+            this.bunifuCustomLabel2.TabIndex = 10;
+            this.bunifuCustomLabel2.Text = "Accede mediante tu cuenta institucional";
+            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(844, 427);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_user);
@@ -193,8 +193,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_user;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_pass;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_close;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }
